@@ -1,0 +1,23 @@
+{% extends "main.html"%}
+{% block content %}
+<div class="wrapper">
+        <div class="anime">
+            <input class="search" type="text" placeholder="search anime">
+        </div>
+        <span class="vr"></span>
+        <div class="manga">
+            <input class="search" type="text" placeholder="search manga">
+        </div>
+</div>
+<script>
+    let inputs = document.querySelectorAll(".search");
+    inputs.forEach((input)=>{
+        input.addEventListener("keyup", (event)=>{
+            event.preventDefault();
+            if(event.keyCode == 13){
+                window.location.href = `/anime/${input.value}`;
+            }
+        })
+    });
+</script>
+{% endblock content %}
