@@ -1,0 +1,25 @@
+{% extends "main.html" %}
+
+{% block content %}
+    <h1>{{ data['title']}}</h1>
+    <img src="{{data['image_url']}}" alt="no-image"/>
+{% if data['trailer_url'] %}
+<iframe src="{{data['trailer_url']}}"
+   width="560" height="315" frameborder="0" allowfullscreen></iframe>
+ </body>
+{% endif %}
+<ul>
+    <li>{{data['episodes']}} episode long</li>
+    <li>{{data['status']}} </li>
+    <li>{{data['aired']['string']}}</li>
+    <li>{{data['rating']}}</li>
+    <li>Score: {{data['score']}}</li>
+</ul>
+<h3>Genre</h3>
+{% for genre in data['genres'] %}
+<p>{{genre['name']}}</p>
+{% endfor %}
+<p>{{data['synopsis']}}</p>
+
+
+{% endblock content %}
