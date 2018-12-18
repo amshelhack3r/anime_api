@@ -1,0 +1,46 @@
+.wrapper{
+    display:flex;
+    flex-direction: row;
+}
+
+
+.wrapper div {
+  width: 50%;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding:25% 0;
+  position:relative;
+  filter:blur(20px);
+}
+
+.vr{
+    border: 1px solid #000;
+}
+input[type="text"]{
+    width: 50%;
+    height: 56px;
+    background: #fff;
+    font-size: 3.3rem;
+    padding-left: 30px;
+    padding-right: 90px;
+    box-shadow: none;
+    color: #111;
+    border: 1px solid #000;
+    border-radius: 20px;
+    text-align: center;
+    margin:0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.manga{
+    background-image:url('manga.jpg');
+}
+.anime{
+    background-image:url('anime.png');
+}
+.manga:hover, .anime:hover{
+    filter:blur(0);
+}
